@@ -22,7 +22,7 @@ const AppBar = () => {
 	return (
 		<View style={styles.container}>
 			<ScrollView contentContainerStyle={styles.flexContainer} horizontal>
-				<Link to="/">
+				<Link style={{flexShrink: 0}} to="/">
 					<Text
 						color="textWhite"
 						fontSize="subheading"
@@ -31,7 +31,7 @@ const AppBar = () => {
 						Repositories
 					</Text>
 				</Link>
-				<Link to="/signin">
+				<Link style={{flexShrink: 0}} to="/signin">
 					<Text
 						color="textWhite"
 						fontSize="subheading"
