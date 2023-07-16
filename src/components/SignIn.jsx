@@ -4,6 +4,7 @@ import Text from './Text';
 import theme from '../theme';
 import FormikTextInput from './FormikTextInput';
 import { Formik } from 'formik';
+import * as yup from 'yup';
 
 const initialValues = {
 	username: '',
@@ -35,6 +36,17 @@ const styles = {
 		textAlign: 'center',
 	},
 };
+
+const validationSchema = yup.object().shape({
+	username: yup
+		.string()
+		.min(1, 'Username mist be at least 1 character long')
+		.required('Username is required'),
+	password: yup
+		.string()
+		.min(1, 'Password must be at least 1 character long')
+		.required('Password is required'),
+});
 
 const SignInForm = ({ onSubmit }) => {
 	return (
@@ -76,6 +88,7 @@ const SignIn = () => {
 				<Formik
 					initialValues={initialValues}
 					onSubmit={onSubmit}
+					validationSchema={validationSchema}
 				>
 					{({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
 				</Formik>
