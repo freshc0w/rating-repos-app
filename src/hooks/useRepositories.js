@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_REPOSITORIES } from '../graphql/queries';
 
@@ -12,6 +11,7 @@ const useRepositories = () => {
 
 	// w/ rest endpoint
 	/**
+   import { useState, useEffect } from 'react';
    const [repositories, setRepositories] = useState();
    const [loading, setLoading] = useState(false);
    const fetchRepositories = async () => {
