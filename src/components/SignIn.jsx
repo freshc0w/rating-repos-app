@@ -48,7 +48,7 @@ const validationSchema = yup.object().shape({
 		.min(1, 'Password must be at least 1 character long')
 		.required('Password is required'),
 });
-
+export 
 const SignInForm = ({ onSubmit }) => {
 
 	return (

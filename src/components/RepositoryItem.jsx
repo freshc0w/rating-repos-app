@@ -71,7 +71,7 @@ const RepositoryItem = props => {
 		number >= 1000 ? `${(number / 1000).toFixed(1)}k` : number.toString();
 
 	return (
-		<View style={{ backgroundColor: 'white' }}>
+		<View testID='repositoryItem' style={{ backgroundColor: 'white' }}>
 			<View style={styles.flexRowContainer}>
 				<View style={styles.generalPadding}>
 					<Image
