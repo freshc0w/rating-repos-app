@@ -5,6 +5,7 @@ import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
 import theme from '../theme';
 import SignIn from './SignIn';
+import RepositoryItem from './RepositoryItem';
 
 import Text from './Text';
 
@@ -25,7 +26,14 @@ const Main = () => {
 					path="/"
 					element={<RepositoryList exact />}
 				/>
-				<Route path='/signin' element={<SignIn />} />
+				<Route
+					path="/:id"
+					element={<RepositoryItem individualRepo="true" />}
+				/>
+				<Route
+					path="/signin"
+					element={<SignIn />}
+				/>
 				<Route
 					path="*"
 					element={
